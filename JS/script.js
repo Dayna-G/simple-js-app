@@ -1,7 +1,5 @@
-let pokemonList ={ 
-{type='Bulbasaur', 
-height='3'
-types=['grass', 'poison']
-}
+let pokemonList =[ 
+{Name:'Bulbasaur', height:'3', types:['grass','poison']},
+{Name:'Charmander', height:'2', type:['fire']},
 
-}
+];
