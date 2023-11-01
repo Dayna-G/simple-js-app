@@ -1,5 +1,10 @@
 let pokemonList =[ 
-{Name:'Bulbasaur', height:'3', types:['grass','poison']},
-{Name:'Charmander', height:'2', type:['fire']},
-{Name:'Squirtle', height:'1', type:['water']},
+{name:'Bulbasaur', height:'3', types:['grass','poison']},
+{name:'Charmander', height:'2', type:['fire']},
+{name:'Squirtle', height:'1', type:['water']},
 ];
+
+for(var i = 0; i < pokemonList.length; i++){
+  document.write('<p>' + pokemonList[i].name + '</p>')
+
+}
