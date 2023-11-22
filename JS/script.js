@@ -6,7 +6,7 @@ let pokemonList =[
 {name:'Squirtle', height:'1', big: false, type:['water']},
 ];
 
-pokemonList.forEach(function (pokemon){
+pokemonList.forEach(function (pokemonRepository){
 let isBig = pokemon.big ? 'Wow that is big' : ' ';
   document.write('<p>' + ' ' + pokemon.name + ' ' + pokemon.height+ ' ' + isBig + '</p>');
 
