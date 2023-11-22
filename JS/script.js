@@ -1,5 +1,5 @@
 
-//
+//let pokemonRepository = (function (pokemon){
 let pokemonList =[ 
 {name:'Bulbasaur', height:'3', big: true , types:['grass','poison']},
 {name:'Charmander', height:'2', big: false , type:['fire']},
@@ -23,7 +23,7 @@ let isBig = pokemon.big ? 'Wow that is big' : ' ';
     getAll: getAll
   }
 });
-let pokemonRepository = (function (pokemon){
-})
+
+
 
 pokemonRepository.getAll();
