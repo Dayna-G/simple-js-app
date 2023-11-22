@@ -1,16 +1,29 @@
+
+//
 let pokemonList =[ 
-{name:'Bulbasaur', height:'3', types:['grass','poison']},
-{name:'Charmander', height:'2', type:['fire']},
-{name:'Squirtle', height:'1', type:['water']},
+{name:'Bulbasaur', height:'3', big: true , types:['grass','poison']},
+{name:'Charmander', height:'2', big: false , type:['fire']},
+{name:'Squirtle', height:'1', big: false, type:['water']},
 ];
 
-for(var i = 0; i < pokemonList.length; i++){
-  document.write('<p>' + pokemonList[i].name + '</p>')
-  
-  if(pokemonList[i].height > 2 ){
-    document.write('<p>(height: ' + pokemonList[i].height + ') That is Big!</p>' );
-  } else {
-    document.write('<p> (height: ' + pokemonList[i].height + ' )</p>')
-}
+pokemonList.forEach(function (pokemon){
+let isBig = pokemon.big ? 'Wow that is big' : ' ';
+  document.write('<p>' + ' ' + pokemon.name + ' ' + pokemon.height+ ' ' + isBig + '</p>');
 
-}
+  function add(pokemon) {
+    pokemonList.push(pokemon);
+  }
+
+  function getAll() {
+    return pokemonList;
+  }
+ 
+  return {
+    add: add,
+    getAll: getAll
+  }
+});
+let pokemonRepository = (function (pokemon){
+})
+
+pokemonRepository.getAll();
