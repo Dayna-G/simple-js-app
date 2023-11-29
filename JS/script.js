@@ -25,21 +25,22 @@ let pokemonList =[
 pokemonList.forEach(function (pokemon){
 let isBig = pokemon.big ? 'Wow that is big!' : ' ';
   console.log(' ' + pokemon.name + ' ' + pokemon.height+ ' ' + isBig );
-  //return {
- 
+
   function getAll () {
     return pokemonList;
 }
   function add (pokemon) {
     pokemonList.push(pokemon);
   }
-return {
+
+  return {
   getAll: getAll,
   add: add
 }
 })
 }
 )();
+
 console.log(pokemonRepository.getAll());
 pokemonRepository.add({name:'Pikachu'});
 console.log(pokemonRepository.getAll());
