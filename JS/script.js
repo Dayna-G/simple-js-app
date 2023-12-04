@@ -26,7 +26,7 @@ pokemonList.forEach(function (pokemon){
 let isBig = pokemon.big ? 'Wow that is big!' : ' ';
   console.log(' ' + pokemon.name + ' ' + pokemon.height+ ' ' + isBig );
 
-  function getAll () {
+function getAll () {
     return pokemonList;
 }
   function add (pokemon) {
@@ -36,7 +36,7 @@ let isBig = pokemon.big ? 'Wow that is big!' : ' ';
   return {
   getAll: getAll,
   add: add
-}
+} 
 })
 }
 )();
