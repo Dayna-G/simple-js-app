@@ -33,16 +33,9 @@ let pokemonList =[
   return {
   getAll: getAll,
   add: add
-<<<<<<< HEAD
 } 
 })();
-=======
-}
-})
-}
-)();
 
->>>>>>> parent of a588956 (fixing for each function)
 console.log(pokemonRepository.getAll());
 pokemonRepository.add({name:'Pikachu'});
 console.log(pokemonRepository.getAll());
