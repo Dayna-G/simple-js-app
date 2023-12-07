@@ -22,11 +22,8 @@ let pokemonList =[
 
 ]
 
-pokemonList.forEach(function (pokemon){
-let isBig = pokemon.big ? 'Wow that is big!' : ' ';
-  console.log(' ' + pokemon.name + ' ' + pokemon.height+ ' ' + isBig );
 
-function getAll () {
+  function getAll () {
     return pokemonList;
 }
   function add (pokemon) {
@@ -36,11 +33,27 @@ function getAll () {
   return {
   getAll: getAll,
   add: add
+<<<<<<< HEAD
 } 
+})();
+=======
+}
 })
 }
 )();
 
+>>>>>>> parent of a588956 (fixing for each function)
 console.log(pokemonRepository.getAll());
 pokemonRepository.add({name:'Pikachu'});
 console.log(pokemonRepository.getAll());
+console.log(pokemonRepository.getAll());
+
+<
+pokemonRepository.getAll().forEach( function (property) {
+  console.log(property)
+  if (property.height > 3){
+    document.write(property.name + '' + ', Height:' + property.height + '- WOW thats big! <hr />')
+  } else {
+    document.write(property.name + '' + ', height:' + property.height + '<hr />' )
+  }
+});
