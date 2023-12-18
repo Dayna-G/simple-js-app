@@ -43,11 +43,16 @@ function addListItem (pokemon){
   let pokemonList = document.querySelector(".pokemon-list");
 let listpokemon = document.createElement('li');
 let button = document.createElement('button');
-button.addEventListener('showDetails');
+
+
 button.innerText = pokemon.name;
 button.classList.add("button-class");
 listpokemon.appendChild(button);
 pokemonList.appendChild(listpokemon);
+button.addEventListener('showDetails');
+button.addEventListener('click', function (e){
+  showDetails(pokemon);
+})
 }
 
   return {
