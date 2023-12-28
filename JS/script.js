@@ -5,7 +5,8 @@ let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 function add(pokemon) {
     if (
       typeof pokemon === "object" &&
-      "name" in pokemon 
+      "name" in pokemon,
+      "detailsUrl" in pokemon
      ) {
   pokemonList.push(pokemon);
 } else {
@@ -44,7 +45,7 @@ function loadList() {
     console.error(e);
   })
 }
-function loadDetails (items){
+function loadDetails (item){
   let url = item.detailsUrl;
   return fetch(url).then(function (response) {
     return response.json();
@@ -64,9 +65,7 @@ function showDetails(item) {
   return {
   add: add,
   getAll: getAll,
-  
   addListItem: addListItem,
-  
   loadList: loadList,
   loadDetails: loadDetails,
   showDetails: showDetails,
@@ -76,7 +75,6 @@ function showDetails(item) {
 
 pokemonRepository.add({ name: "Pikachu", height: 0.3, types: ["electric"] });
 pokemonRepository.add({ name: "weedle", height: 0.3, types: ["electric"] });
-
 pokemonRepository.loadList().then(function(){
 //console.log(pokemonRepository.getAll());
 pokemonRepository.getAll().forEach(function(pokemon){
