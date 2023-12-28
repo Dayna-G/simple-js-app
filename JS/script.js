@@ -62,6 +62,16 @@ function showDetails(item) {
     console.log(item);
   });
 }
+function validateEmail(){
+  let value = emailInput.value;
+  let hasAtSign = value.indexOf('@') > -1;
+  let hasDot = valueIndexOf('@')> -1;
+  return value && hasAtSign && hasDot;
+}
+function validatePassword(){
+  let value = passwordInput.value;
+  return Value && value.length >= 8;
+}
   return {
   add: add,
   getAll: getAll,
