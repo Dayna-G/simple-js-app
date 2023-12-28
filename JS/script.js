@@ -1,5 +1,6 @@
 let pokemonRepository = (function (){
-let pokemonList = []; 
+  let modalContainer = document.querySelector('#modal-container')
+  let pokemonList = []; 
 let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
 function add(pokemon) {
@@ -62,16 +63,7 @@ function showDetails(item) {
     console.log(item);
   });
 }
-function validateEmail(){
-  let value = emailInput.value;
-  let hasAtSign = value.indexOf('@') > -1;
-  let hasDot = valueIndexOf('@')> -1;
-  return value && hasAtSign && hasDot;
-}
-function validatePassword(){
-  let value = passwordInput.value;
-  return Value && value.length >= 8;
-}
+
   return {
   add: add,
   getAll: getAll,
@@ -80,16 +72,58 @@ function validatePassword(){
   loadDetails: loadDetails,
   showDetails: showDetails,
   };
-})();
 
+
+
+
+function showModal (title, text) {
+  modalContainer.innerHTML = '';
+  let modal = document.createElement('div');
+  modal.classList.add('modal');
+
+  let closeButtonElement = document.createElement('button');
+  closeButtonElement.classList.add('modal-close');
+  closeButtonElement.innertext = 'Close';
+  closeButtonElement.addEventListener('click', hideModal);
+
+  let titleElement = document.createElement('h1');
+  titleElement.innerText = title;
+
+  let contentElement = document.createElement('p');
+  contentElement.innerText = text;
+
+  modal.appendChild(closeButtonElement);
+  modal.appendChild(titleElement);
+  modal.appendChild(contentElement);
+  modalContainer.appendChild(modal);
+
+modalContainer.classList.add('is-visable');
+}
+function hideModal(){
+  modalContainer.classList.remove('is-visable');
+}
+})();
+window.addEventListener('keydown', (e)=> {
+  if(e.key === 'Escape' && modalContainer.classList.contains('is-visable')) {
+    hideModal();
+  }  
+ });
+
+ modalContainer.addEventListener('click', (e) => {
+  let target = e.target;
+  if (target === modalContainer) {
+    hideModal();
+  }
+});
+
+document.querySelector('#show-modal').addEventListener('click', () => {
+  showModal();
+});
 
 pokemonRepository.add({ name: "Pikachu", height: 0.3, types: ["electric"] });
 pokemonRepository.add({ name: "weedle", height: 0.3, types: ["electric"] });
 pokemonRepository.loadList().then(function(){
-//console.log(pokemonRepository.getAll());
 pokemonRepository.getAll().forEach(function(pokemon){
 pokemonRepository.addListItem(pokemon);
 });
 });
-
-
