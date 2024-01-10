@@ -23,6 +23,8 @@ console.log("pokemon is not correct");
 function showDetails(item) {
   pokemonRepository.loadDetails(item).then(function () {
     console.log(item);
+  }).catch(function (error) {
+    console.error(error);
   });
 }
 
@@ -60,13 +62,15 @@ function loadDetails (item){
     item.imageUrl = details.sprites.front_default;
     item.height = details.height;
     item.types = details.types;
+  }).catch(function (error) {
+    console.error(error);
   });
 }
 function add(pokemon) {
 pokemonList.push(pokemon);
 }
 function showDetails (pokemon) {
-  loadDetails(pokemon),then(function () {
+  loadDetails(pokemon).then(function () {
     console.log(pokemon);
   });
 }
@@ -130,9 +134,10 @@ document.querySelector('#show-modal').addEventListener('click', () => {
 }) 
 */
 
-
 pokemonRepository.loadList().then(function () {
 pokemonRepository.getAll().forEach(function(pokemon){
 pokemonRepository.addListItem(pokemon);
 });
-})
+}).catch(function (error) {
+  console.error(error);
+});
