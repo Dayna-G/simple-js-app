@@ -15,10 +15,8 @@
     color: black;
     border: 2px solid darkslategrey;
 }
-#modal-container {
-    display: none;
-  }
-  #modal-container.is-visable{
+
+  #modal-container {
     position: fixed;
     padding: 20px;
     box-sizing: border-box;
@@ -31,4 +29,34 @@
     overflow: auto; 
     display: grid;
     text-align: center;
+  }
+  .modal {
+    margin: auto;
+    display: inline-block;
+    box-sizing: border-box;
+    background: #fff;
+    padding: 15px;
+    width: 100%;
+    max-width: 700px;
+    text-align: left;
+  }
+  .modal-close {
+    float: right;
+    -webkit-apperance: none;
+    border: 0;
+    background: none;
+    color: #777;
+    text-decoration: underline;
+  }
+  .modal h1 {
+    margin-top: 0;
+  }
+  .modal p { 
+    margin-bottom: 0;
+  }
+  #modal-container{
+    display: none;
+  }
+  #modal-container.is-visable {
+    display: block;
   }
