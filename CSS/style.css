@@ -57,6 +57,6 @@
   #modal-container{
     display: none;
   }
-  #modal-container.is-visable {
+  #modal-container.is-visible {
     display: block;
   }
