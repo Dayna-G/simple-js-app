@@ -72,6 +72,7 @@ console.log("pokemon is not correct");
 function showDetails(item) {
   pokemonRepository.loadDetails(item).then(function () {
     console.log(item);
+    showModal(item.name, "height: "+item.height, item.imageUrl)
   }).catch(function (error) {
     console.error(error);
   });
@@ -118,9 +119,9 @@ function loadDetails (item){
 function add(pokemon) {
   pokemonList.push(pokemon);
 }
-function showDetails (pokemon) {
-  showModal(pokemon.name, pokemon.name + pokemon.height, pokemon.img )
-};
+//function showDetails (pokemon) {
+  //showModal(pokemon.name, pokemon.name + pokemon.height, pokemon.img )
+//};
   
 return {
     getAll: function () {
