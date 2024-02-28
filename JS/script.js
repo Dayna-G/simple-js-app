@@ -53,9 +53,9 @@ modalContainer.addEventListener('click', (e) => {
   }
 });
 
-document.querySelector('#show-modal').addEventListener('click', () => {
-  showModal('Modal title', 'This is the modal content!');
-});
+//document.querySelector('#show-modal').addEventListener('click', () => {
+ // showModal('Modal title', 'This is the modal content!');
+//});
 
 function add(pokemon) {
     if (
