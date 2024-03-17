@@ -3,11 +3,16 @@
     <head>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
         <meta charset="utf-8">
+        <title>Pokedex</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="CSS/style.css">
-        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</head>
+<body></body>
+<header>
 <nav class="navbar fixed-class navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">Pokedex</a>
     <button class="navbar-toggler" type="button" data-toggle="collaspe" 
     data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggel navigation">
     <span class="navbar-toggel-icon"></span>
@@ -15,42 +20,73 @@
 <div class="collaspe navbar-collaspe" id="navbarNav">
     <ul class="navbar-nav">
         <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span> </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#"> Pricing</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">
-                Disabled
-            </a>
+            <a class="nav-link" href="#">All Pokemon <span class="sr-only">(current)</span> </a>
         </li>
     </ul>
 </div>
 </nav>
+</header>
 
-        <title>Simple JS App</title> 
         <h1 class="text-center">Pokedex</h1>
-    </head>
-    <body>
+    
+<!--trigger Button-->
+<div>
+    <ul class="list-group"></ul>
+</div>
+<div id="modal-container"></div>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    launce Demo Modal
+</button>
 
-        
+
+<!--Modal--> 
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-lableledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLabel">Pokemon Details</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div id="pokemon-details">
+                        <div class="container">
+                            <div class="row">
+                </div>
+                    </div>
+                        </div>
+                            </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
-<div id="modal-container">
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
 
+</button>
+
+<div class="list-group" id="modal-container">
 </div>
 
 <ul class="pokemon-list list-unstyled text-center" >
 </ul>
-
+-->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.6/dist/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
+
 <script scr="JS\promise-polyfill.js"></script>
 <script scr="JS\fetch-polyfill.js"></script>
-
 <script src="JS/script.js"></script>
-    </body>
+
+
+</body>
 </html>
