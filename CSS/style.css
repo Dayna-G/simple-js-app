@@ -1,11 +1,12 @@
 .list-group{
   display: flex;
   flex-wrap: wrap;
-
+  cursor: pointer;
   justify-content: center;
   align-content: center;
   padding: 10px;
   gap: 10px;
+  
 }
 .list-group-item{
   padding: 10px;
@@ -16,13 +17,13 @@
 
 .list-group-item:nth-child(even){
   background-color: #556b2f;
-  border: 10px solid #777;
-  border-radius: 10px;
+  border: 10px solid #8b8b8b;
+  border-radius: 15px;
 }
 
 .list-group-item:nth-child(odd){
   background-color: #789;
-  border: 10px solid #777;
-  border-radius: 10px;
+  border: 10px solid #8b8b8b;
+  border-radius: 15px;
   
 }
